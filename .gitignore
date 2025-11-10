@@ -22,3 +22,81 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# -------------------------------
+# Maven
+# -------------------------------
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# Ignore Maven Wrapper JAR (commit it if your team prefers)
+.mvn/wrapper/maven-wrapper.jar
+
+# -------------------------------
+# AEM
+# -------------------------------
+# Local AEM instance artifacts (should never be committed)
+crx-quickstart/
+**/crx-quickstart/
+# Dispatcher build outputs
+dispatcher/target/
+**/dispatcher/target/
+# VLT sync metadata (do NOT ignore jcr_root/.vlt which is source)
+.vlt-sync/
+
+# -------------------------------
+# Frontend / HTML tooling
+# -------------------------------
+node_modules/
+bower_components/
+dist/
+build/
+.cache/
+.parcel-cache/
+*.tsbuildinfo
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# -------------------------------
+# IDE / Editor
+# -------------------------------
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+out/
+bin/
+*.swp
+*.swo
+*~
+
+# -------------------------------
+# OS files
+# -------------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------------
+# Env / misc
+# -------------------------------
+.env
+.env.*.local
+.env.local
+!.env.sample

@@ -83,9 +83,9 @@
     </developers>
 
      <scm>
-        <connection>scm:git:https://github.com/adobe/aem-guides-wknd.git</connection>
-        <developerConnection>scm:git:https://github.com/adobe/aem-guides-wknd.git</developerConnection>
-        <url>https://github.com/adobe/aem-guides-wknd/tree/main</url>
+        <connection>scm:git:https://github.com/sd2095/aem-guides-wknd.git</connection>
+        <developerConnection>scm:git:https://github.com/sd2095/aem-guides-wknd.git</developerConnection>
+        <url>https://github.com/sd2095/aem-guides-wknd/tree/main</url>
         <tag>HEAD</tag>
     </scm>
 
