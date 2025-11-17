@@ -16,6 +16,7 @@
 package com.adobe.aem.guides.wknd.core.models.impl;
 
 import com.adobe.aem.guides.wknd.core.models.ImageList;
+import com.adobe.aem.guides.wknd.core.utils.CommonUtils;
 import com.adobe.cq.wcm.core.components.models.Image;
 import com.adobe.cq.wcm.core.components.models.datalayer.ComponentData;
 import com.adobe.cq.wcm.core.components.models.datalayer.builder.DataLayerBuilder;
@@ -279,6 +280,12 @@ public class ImageListImpl implements ImageList {
 
             // Copy the properties from the original image
             properties.putAll(resource.getValueMap());
+
+            String fileRef = properties.get(PN_FILE_REFERENCE, String.class);
+            if (StringUtils.isNotBlank(fileRef)) {
+                String resolved = CommonUtils.resolveIntoScene7(resource.getResourceResolver(), fileRef);
+                properties.put(PN_FILE_REFERENCE, resolved);
+            }
 
             // Override the decorative configuration attributes
             properties.put(PN_ALT, alt);
