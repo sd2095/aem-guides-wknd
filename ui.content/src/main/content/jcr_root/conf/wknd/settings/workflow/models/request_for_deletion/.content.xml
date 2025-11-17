@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2025-11-17T13:05:49.728+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Request for Deletion"
+        sling:resourceType="cq/workflow/components/pages/model"
+        lastSynced="{Date}2025-11-17T13:05:51.118+05:30">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <participant
+                jcr:created="{Date}2010-09-21T14:47:57.672+02:00"
+                jcr:createdBy="admin"
+                jcr:description="please delete page"
+                jcr:lastModified="{Date}2025-11-17T13:04:05.039+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Request for Deletion"
+                sling:resourceType="cq/workflow/components/model/participant">
+                <metaData
+                    jcr:lastModified="{Date}2010-09-21T14:48:07.024+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    PARTICIPANT="WKND_Approvers"/>
+            </participant>
+            <or
+                jcr:created="{Date}2025-11-17T13:03:46.611+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-11-17T13:03:46.611+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/workflow/components/model/or"
+                branches="2"
+                orSplit="true">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <participant_copy
+                        jcr:created="{Date}2025-11-17T13:02:36.427+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2025-11-17T13:02:52.762+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Back to author"
+                        sling:resourceType="cq/workflow/components/model/participant">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PARTICIPANT="WKND_Authors"/>
+                    </participant_copy>
+                </_x0031_>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <container
+                        jcr:created="{Date}2025-11-17T13:05:26.579+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2025-11-17T13:05:49.726+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Delete Page / Asset"
+                        sling:resourceType="cq/workflow/components/model/container">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            CONTAINER="/var/workflow/models/deactivate_and_delete"/>
+                    </container>
+                </_x0032_>
+            </or>
+        </flow>
+    </jcr:content>
+</jcr:root>
